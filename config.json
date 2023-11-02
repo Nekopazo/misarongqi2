@@ -81,7 +81,26 @@
 					"path": "SS_WSPATH"
 				}
 			}
-		}
+		},
+		{	
+			"port": 50000,
+			"listen": "127.0.0.1",
+			"protocol": "vless",
+			"settings": {
+			  "clients": [
+				{
+				  "id": "UUID" 
+				}
+			  ],
+			  "decryption": "none"
+			},
+			"streamSettings": {
+			  "network": "grpc",
+			  "grpcSettings": {
+				"serviceName": "dasda35fvgrpc" 
+			  }
+			}
+		  }
 	],
 	"outbounds": [
 		{
