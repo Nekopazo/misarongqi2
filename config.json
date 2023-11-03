@@ -31,8 +31,7 @@
 			"settings": {
 				"clients": [
 					{
-						"id": "UUID",
-     "flow": "xtls-rprx-vision"
+						"id": "UUID"
 					}
 				],
 				"decryption": "none"
