@@ -8,7 +8,7 @@ COPY config.json ./
 COPY entrypoint.sh ./
 
 RUN apt-get update && apt-get install -y wget unzip iproute2 systemctl && \
-    wget -O temp.zip https://github.com/XTLS/Xray-core/releases/download/v1.8.10/Xray-linux-64.zip && \
+    wget -O temp.zip https://github.com/XTLS/Xray-core/releases/download/v1.8.11/Xray-linux-64.zip && \
     unzip temp.zip xray && \
     rm -f temp.zip && \
     chmod -v 755 xray entrypoint.sh
