@@ -1,0 +1,12 @@
+{
+    "outbounds":[
+        {
+            "protocol":"freedom",
+            "tag":"z_direct_outbound"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block_quic"
+        }
+    ]
+}
