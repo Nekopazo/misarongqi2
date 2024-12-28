@@ -100,12 +100,17 @@
 				"serviceName": "dasda35fvgrpc" 
 			  }
 			}
-		  }
+		}
 	],
 	"outbounds": [
 		{
 			"protocol": "freedom",
-			"settings": {}
+			"settings": {},
+			"tag": "direct"
+		},
+		{
+			"protocol": "blackhole",
+			"tag": "block_quic"
 		}
 	],
 	"dns": {
@@ -113,6 +118,20 @@
 			"8.8.8.8",
 			"8.8.4.4",
 			"localhost"
+		]
+	},
+	"routing": {
+		"rules": [
+			{
+				"type": "field",
+				"port": "443",
+				"network": "udp",
+				"outboundTag": "block_quic"
+			},
+			{
+				"type": "field",
+				"outboundTag": "direct"
+			}
 		]
 	}
 }
