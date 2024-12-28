@@ -1,0 +1,21 @@
+{
+  "routing": {
+    "rules": [
+{
+                "type": "field",
+                "port": "443",
+                "network": "udp",
+                "outboundTag": "block_quic"
+            },
+      {
+        "type": "field",
+        "domain": [
+          "domain:gstatic.com",
+          "domain:googleapis.com",
+	  "domain:googleapis.cn"
+        ],
+        "outboundTag": "z_direct_outbound"
+      }
+    ]
+  }
+}
